@@ -18,6 +18,8 @@ module ID_Reg
     Imm_in,
     B_in,
     SR_update_in,
+  input [`REG_FILE_DEPTH-1:0] 				reg_file_src1_in,
+  input [`REG_FILE_DEPTH-1:0] 				reg_file_src2_in,
   output reg [`WORD_WIDTH-1:0]            pc,
   output reg [`WORD_WIDTH-1:0]            instruction,
   output reg [`REG_FILE_DEPTH-1:0] 				reg_file_dst_out,
@@ -30,7 +32,9 @@ module ID_Reg
     WB_en_out,
     Imm_out,
     B_out,
-    SR_update_out
+    SR_update_out,
+  output reg [`REG_FILE_DEPTH-1:0] 				reg_file_src1_out,
+  output reg [`REG_FILE_DEPTH-1:0] 				reg_file_src2_out
 );
 
   always @(posedge clk, posedge rst) begin
@@ -50,6 +54,8 @@ module ID_Reg
       Imm_out <= 0;
       B_out <= 0;
       SR_update_out <= 0;
+      reg_file_src1_out <= 0;
+      reg_file_src2_out <= 0;
     end
     else begin
       pc <= pc_in;
@@ -67,8 +73,9 @@ module ID_Reg
       Imm_out <= Imm_in;
       B_out <= B_in;
       SR_update_out <= SR_update_in;
+      reg_file_src1_out <= reg_file_src1_in;
+      reg_file_src2_out <= reg_file_src2_in;
     end
   end
 
 endmodule
-

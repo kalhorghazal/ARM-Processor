@@ -41,3 +41,7 @@
 `define OP_TST 4'b1000
 `define OP_LDR 4'b0100
 `define OP_STR 4'b0100
+
+`define FORWARDING_SEL_NOP 2'b00
+`define FORWARDING_SEL_MEM 2'b01
+`define FORWARDING_SEL_WB 2'b10

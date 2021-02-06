@@ -5,11 +5,13 @@ module ARM_TB;
 
   reg clk;
   reg rst;
+  reg enableForwarding;
 
 
   ARM CPU(
     .clk(clk),
-    .rst(rst)
+    .rst(rst),
+    .enableForwarding(enableForwarding)
   );
 
   initial begin
@@ -18,10 +20,11 @@ module ARM_TB;
   end
 
   initial begin
+    enableForwarding = 1;
     rst = 1;
     # (clock_period / 2);
     rst = 0;
-    # (600*clock_period);
+    # (1000*clock_period);
     $stop;
   end
 endmodule
