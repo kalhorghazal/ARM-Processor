@@ -3,6 +3,7 @@ A Pipeline implementation of ARM
 ## How it works ? 
 
 This CPU has a `32bit` data bus and a `32bit` address bus.
+
 All of the Instructions are 32 bit.
 
 Instructions :
