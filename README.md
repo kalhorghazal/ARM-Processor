@@ -1,12 +1,12 @@
 # ARM-Processor
-A Pipelined implementation of ARM
-## How it works ? 
+A pipelined implementation of ARM processor
+## How it works? 
 
-This CPU has a `32bit` data bus and a `32bit` address bus.
+This CPU has a `32-bit` data bus and a `32-bit` address bus.
 
-All of the Instructions are 32 bit.
+All of the instructions are 32-bit.
 
-Instructions :
+Instructions:
 
 | Instruction Mnemonic | Definition          | Bits 27:26 | Bits 24:21 | 
 |----------------------|---------------------|------------|------------|
