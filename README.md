@@ -1,6 +1,6 @@
 # ARM-Processor
 A pipelined implementation of ARM processor
-## How it works? 
+## Processor Specifications
 
 This CPU has a `32-bit` data bus and a `32-bit` address bus.
 
